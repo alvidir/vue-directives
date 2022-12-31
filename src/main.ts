@@ -1,10 +1,11 @@
+import { App } from "vue";
 import ClickOutside from "./ClickOutside";
 
-const CLICK_OUTSIDE = "click-outside";
-export default {
-  ClickOutside,
-};
+const CLICK_OUTSIDE_ATTR = "click-outside";
 
-export function include(app: any): any {
-  app.directive(CLICK_OUTSIDE, ClickOutside);
+function include(app: App): App {
+  return app.directive(CLICK_OUTSIDE_ATTR, ClickOutside);
 }
+
+export default include;
+export { ClickOutside };

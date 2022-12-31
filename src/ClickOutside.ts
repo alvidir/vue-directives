@@ -17,11 +17,16 @@ const clickOutside = {
     };
 
     document.addEventListener("click", thisDirective.handleClickOutside);
+    document.addEventListener("contextmenu", thisDirective.handleClickOutside);
   },
 
   unmounted: (_: FocusableElement, binding: DirectiveBinding) => {
     const thisDirective = binding.dir as ExtendedDirective;
     document.removeEventListener("click", thisDirective.handleClickOutside);
+    document.removeEventListener(
+      "contextmenu",
+      thisDirective.handleClickOutside
+    );
   },
 };
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="demo-set light">
-      <div class="demo-subset bg-secondary">
+      <div class="demo-subset bg-secondary" v-click-outside="onClickOutside">
         <!-- DEMO ITEM -->
       </div>
       <div class="demo-subset bg-primary">
@@ -24,6 +24,11 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ServeDev",
+  methods: {
+    onClickOutside() {
+      console.log("on click outisde");
+    },
+  },
 });
 </script>
 

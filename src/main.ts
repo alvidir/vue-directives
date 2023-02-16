@@ -12,4 +12,4 @@ function include(app: App): App {
 }
 
 export default include;
-export { ClickOutside };
+export { ClickOutside, WindowOverflow };

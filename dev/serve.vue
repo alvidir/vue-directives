@@ -1,15 +1,11 @@
 <template>
   <div id="app">
     <div class="demo-set light">
-<<<<<<< HEAD
-      <div class="demo-subset bg-secondary" v-click-outside="onClickOutside">
-=======
       <div
         class="demo-subset bg-secondary"
         v-click-outside="onClickOutside"
         v-window-overflow="onViewOverflow"
       >
->>>>>>> f88a637 (feat: add window-overflow directive)
         <!-- DEMO ITEM -->
       </div>
       <div class="demo-subset bg-primary">
@@ -34,9 +30,6 @@ export default defineComponent({
   name: "ServeDev",
   methods: {
     onClickOutside() {
-<<<<<<< HEAD
-      console.log("on click outisde");
-=======
       console.log("Click outside");
     },
 
@@ -52,7 +45,6 @@ export default defineComponent({
       } else {
         console.log("No vertical overflow");
       }
->>>>>>> f88a637 (feat: add window-overflow directive)
     },
   },
 });

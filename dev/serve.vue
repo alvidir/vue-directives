@@ -1,11 +1,7 @@
 <template>
   <div id="app">
     <div class="demo-set light">
-      <div
-        class="demo-subset bg-secondary"
-        v-click-outside="onClickOutside"
-        v-window-overflow="onViewOverflow"
-      >
+      <div class="demo-subset bg-secondary" v-click-outside="onClickOutside">
         <!-- DEMO ITEM -->
       </div>
       <div class="demo-subset bg-primary">
@@ -31,20 +27,6 @@ export default defineComponent({
   methods: {
     onClickOutside() {
       console.log("Click outside");
-    },
-
-    onViewOverflow(overflow: { x: boolean; y: boolean }) {
-      if (overflow.x) {
-        console.log("Horizontal overflow");
-      } else {
-        console.log("No horizontal overflow");
-      }
-
-      if (overflow.y) {
-        console.log("Vertical overflow");
-      } else {
-        console.log("No vertical overflow");
-      }
     },
   },
 });
@@ -75,9 +57,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: $fib-14 * 1px;
   height: 100vh;
-  min-height: $fib-13 * 1px;
 
   &.light {
     @extend .theme-light;
